@@ -10,13 +10,20 @@ import "./Base64.sol";
 import "./IDungToken.sol"; // Interface for DUNG token
 
 /// @title HippoBreeds
+<<<<<<< HEAD
 /// @notice A contract to mint and breed Legendary Hippo NFTs, with special steroid-boosted Hippo>
 /// @dev Inherits from TRC721, ITRC721Metadata, Ownable, and ReentrancyGuard.
 contract HippoBreeds is TRC21, ITRC721Metadata, Ownable, ReentrancyGuard {
 
+=======
+/// @notice A contract to mint and breed Legendary Hippo NFTs, with special steroid-boosted Hippos.
+/// @dev Inherits from TRC721, ITRC721Metadata, Ownable, and ReentrancyGuard.
+contract HippoBreeds is TRC21, ITRC721Metadata, Ownable, ReentrancyGuard {
+>>>>>>> 221e00f (added new metrics)
     using Strings for uint256;
     using Counters for Counters.Counter;
 
+   
     Counters.Counter private _tokenIdCounter;
 
     // Interface for the $DUNG token
