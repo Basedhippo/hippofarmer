@@ -46,7 +46,7 @@ contract HippoBreeds is ERC721, ERC721URIStorage, Ownable, ReentrancyGuard {
 
     string public baseURI;
     uint256 public maxSupply = 888; // Maximum supply of Legendary Hippos
-    uint256 public mintCost = 5000000; // Mint cost in SUN (5 TRX)
+    uint256 public mintCost = 888888888; // Mint cost in SUN (5 TRX)
     uint256 public steroidCost = 699420000; // Steroid cost in SUN (699.42 TRX)
     uint256 public dungRequirement = 100000 * (10 ** 18); // 100,000 $DUNG tokens required to mint
 
