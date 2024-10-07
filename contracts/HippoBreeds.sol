@@ -12,7 +12,7 @@ import "./IDungToken.sol"; // Interface for DUNG token
 /// @title HippoBreeds
 /// @notice A contract to mint and breed Legendary Hippo NFTs, with special steroid-boosted Hippo>
 /// @dev Inherits from TRC721, ITRC721Metadata, Ownable, and ReentrancyGuard.
-contract HippoBreeds is TRC721, ITRC721Metadata, Ownable, ReentrancyGuard {
+contract HippoBreeds is TRC721, Ownable, ReentrancyGuard {
 
 
     using Strings for uint256;
@@ -83,7 +83,7 @@ contract HippoBreeds is TRC721, ITRC721Metadata, Ownable, ReentrancyGuard {
         address _dungToken,
         address _devWallet,
         address _stakingPoolWallet
-    ) ERC721(_name, _symbol) {
+    ) TRC721(_name, _symbol) {
         baseURI = _BaseURI;
         dungToken = IDungToken(_dungToken);
         devWallet = _devWallet;
@@ -188,8 +188,8 @@ contract HippoBreeds is TRC721, ITRC721Metadata, Ownable, ReentrancyGuard {
     }
 
     /// @dev Returns token URI, building metadata for the NFT.
-    function tokenURI(uint256 tokenId) public view override(ERC721, ERC721URIStorage) returns (string memory) {
-        require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
+    function tokenURI(uint256 tokenId) public view override(TRC721, TRC721URIStorage) returns (string memory) {
+        require(_exists(tokenId), "TRC721Metadata: URI query for nonexistent token");
         return buildMetadata(tokenId);
     }
 
