@@ -40,5 +40,6 @@ module.exports = {
       runs: 200,
     },
     evmVersion: 'istanbul',
-  },
+    importPaths: ["node_modules"] 
+   },
 };

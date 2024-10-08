@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/token/TRC721/TRC721.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "./Base64.sol";
